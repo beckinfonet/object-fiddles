@@ -50,13 +50,7 @@ that is named color, with the value being the color of your backpack.
 const backPack = {};
 const item = 'firstPocket';
 backPack['firstPocket'] = 'chapstick';
-
-
-
-
-
 backPack.color = 'black';
-
 
 //After you do the above, alert your entire backPack object.
 
@@ -86,8 +80,8 @@ var user2 = {
 
   //Code Here
 
-
-
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
 
 // =============================================
@@ -96,30 +90,24 @@ var user2 = {
 // =============================================
 // =============================================
 
-
-
-
-
-
 //NEXT PROBLEM
 
-
 //Create an empty object called methodCollection.
-
-  //Code Here
-
-
-
-
+const methodCollection = {};
+ 
 /*
 Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. 
  */
 
-  //Code Here
+methodCollection.alertHello = function(){
+  alert('hello');
+}
 
-
+methodCollection.logHello = function(){
+  console.log('hello');
+}
 
 
 
@@ -127,35 +115,35 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
-
-
-
-
-
-
+  methodCollection.alertHello();
+  methodCollection.logHello();
 
 //NEXT PROBLEM
-
-
 
 // Create a function called makePerson which takes in name, birthday, ssn as its
 // parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
-
-
-
-
-
-  
-
+ const makePerson = function(name, birthday, ssn){
+   const obj = {
+     name,
+     birthday,
+     ssn
+   }
+   return obj;
+ }
 
 //NEXT PROBLEM
 
+// Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make 
+//a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
-
-// Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
-
-  //Code Here
+const makeCard = function(cardNumber, expirationDate, securityCode){
+  const card = {
+    cardNumber,
+    expirationDate,
+    securityCode
+  }
+  return card;
+}
 
 
